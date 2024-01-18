@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <title>Tela de Login</title>
 </head>
 <body>
@@ -17,8 +18,19 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente! Logue na sua conta para alterar as configurações do seu ambiente.</p>
-                <form action="longin.php" method="POST">
-
+                <form action="longin.php" method="POST" autocomplete="on">
+                    <div class="campo">
+                        <i class="material-icons">person</i>
+                        <input type="email" name="user" id="user" required autocomplete="email" placeholder="Seu e-mail" maxlength="30">
+                        <label for="user">Usuario</label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="password" name="senha" id="senha" required minlength="8" maxlength="20" autocomplete="current-password" placeholder="Senha">
+                        <label for="senha">Senha</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueceu.html" class="btn">Esqueci a senha <i class="material-icons">mail</i></a> 
                 </form>
             </div>
         </section>
